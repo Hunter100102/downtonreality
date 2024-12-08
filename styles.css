@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background: #282828;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 2.5rem;
+}
+
+header .logo p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #f9d342;
+}
+
+nav ul {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.hero {
+    background: url('home-bg.jpg') no-repeat center center/cover;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #f9d342;
+    color: #282828;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    background: #282828;
+    color: white;
+}
+
+#services, #about, #contact {
+    padding: 2rem;
+    text-align: center;
+}
+
+#services h2, #about h2, #contact h2 {
+    margin-bottom: 1rem;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.service-box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.service-box h3 {
+    margin-bottom: 0.5rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    background: #282828;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
