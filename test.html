@@ -1,0 +1,211 @@
+<style>
+    main, .custom-home-wrapper {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+  
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #000;
+    }
+  
+    .hero {
+      background-image: url('/images/hero.jpg'); /* Replace with your image path */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      width: 100%;
+      position: relative;
+    }
+  
+    .search-filters {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 40px;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+      max-width: 90%;
+      z-index: 5;
+      text-align: center;
+    }
+  
+    .filters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+  
+    .filters-grid select {
+      width: 100%;
+      padding: 12px;
+      background: #222;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+    }
+  
+    .search-button {
+      background-color: #007bff;
+      padding: 12px 24px;
+      font-size: 18px;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+  
+    .search-button:hover {
+      background-color: #0056b3;
+    }
+  
+    .local-searches {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 60px 20px;
+    }
+  
+    .local-searches h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+  
+    .local-searches-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1400px;
+      margin: auto;
+    }
+  
+    .local-searches-grid a {
+      background-size: cover;
+      background-position: center;
+      height: 150px;
+      color: #fff;
+      text-shadow: 1px 1px 4px #000;
+      font-weight: bold;
+      font-size: 18px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 15px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+  
+    .local-searches-grid a[href="/atlanta/"] { background-image: url('https://u.realgeeks.media/downtonrealty/AtlantaNight1.png'); }
+    .local-searches-grid a[href="/lithonia/"] { background-image: url('/images/lithonia.jpg'); }
+    .local-searches-grid a[href="/loganville/"] { background-image: url('/images/loganville.jpg'); }
+    .local-searches-grid a[href="/gwinnett/"] { background-image: url('/images/gwinnett.jpg'); }
+  
+    .special-searches {
+      background-color: #f9f9f9;
+      text-align: center;
+      padding: 60px 20px;
+    }
+  
+    .special-searches h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+  
+    .special-searches-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+  
+    .special-searches-grid a {
+      background-color: #e0e0e0;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 15px;
+      border-radius: 6px;
+      display: block;
+      transition: background 0.3s;
+    }
+  
+    .special-searches-grid a:hover {
+      background-color: #d4d4d4;
+    }
+  
+    .map-search {
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+  
+    .map-search iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
+  <!-- Hero Section -->
+  <div class="hero">
+  <section class="search-filters">
+  <h2>Greater Georgia Is Awesome!</h2>
+  <div class="filters-grid"><select name="county">
+  <option value="">County</option>
+  <option>Dekalb</option>
+  <option>Gwinnett</option>
+  <option>Fulton</option>
+  </select><select name="city">
+  <option value="">City</option>
+  <option>Atlanta</option>
+  <option>Lithonia</option>
+  <option>Loganville</option>
+  </select><select name="price">
+  <option value="">Max Price</option>
+  <option>$250,000</option>
+  <option>$500,000</option>
+  <option>$750,000</option>
+  <option>$1,000,000+</option>
+  </select><select name="beds">
+  <option value="">Beds</option>
+  <option>3+</option>
+  <option>4+</option>
+  <option>5+</option>
+  </select><select name="baths">
+  <option value="">Baths</option>
+  <option>2+</option>
+  <option>3+</option>
+  <option>4+</option>
+  </select><select name="type">
+  <option value="">Property Type</option>
+  <option>Home</option>
+  <option>Condo</option>
+  <option>Land</option>
+  <option>Multi-Res</option>
+  </select></div>
+  <a class="search-button" href="/search/advanced_search/">Advanced Search</a></section>
+  </div>
+  <!-- Local Searches -->
+  <section class="local-searches">
+  <h2>Explore Local Areas</h2>
+  <div class="local-searches-grid"><a href="/atlanta/">Atlanta</a> <a href="/lithonia/">Lithonia</a> <a href="/loganville/">Loganville</a> <a href="/gwinnett/">Gwinnett County</a> <a href="/fulton/">Fulton County</a> <a href="/dekalb/">Dekalb County</a></div>
+  </section>
+  <!-- Special Searches -->
+  <section class="special-searches">
+  <h2>---------------------------------- Special Searches ----------------------------------</h2>
+  <div class="special-searches-grid"><a href="/search/school-district/">School District Search</a> <a href="/search/county/">Search by County</a> <a href="/search/1-story-homes/">1 Story Homes</a> <a href="/search/no-hoa/">No HOA Homes</a> <a href="/search/new-construction/">New Construction</a> <a href="/search/5-bedroom/">5 Bedroom Homes</a> <a href="/search/4-bedroom/">4 Bedroom Homes</a> <a href="/search/3-bedroom/">3 Bedroom Homes</a> <a href="/search/3-car-garage/">3 Car Garage</a> <a href="/search/pool-homes/">Pool Homes</a></div>
+  </section>
+  <!-- Map Search -->
+  <section class="map-search">
+  <h2>Interactive Map Search</h2>
+  <iframe src="/map_search/" loading="lazy"></iframe></section>
