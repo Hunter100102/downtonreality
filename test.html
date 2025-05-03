@@ -1,11 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Downton Realty | Georgia Homes for Sale</title>
+  <meta name="description" content="Browse real estate listings in Georgia including Atlanta, Gwinnett, Dekalb, and more. Use our advanced search tools and interactive map to find your dream home.">
+  <meta name="keywords" content="Georgia homes for sale, Atlanta real estate, Gwinnett property, advanced search, interactive map, property valuation">
+  <meta name="author" content="Downton Realty">
+
+  <!-- Open Graph for social sharing -->
+  <meta property="og:title" content="Downton Realty | Search Georgia Homes for Sale">
+  <meta property="og:description" content="Explore homes in Greater Georgia with interactive tools, market reports, and property valuations.">
+  <meta property="og:image" content="https://u.realgeeks.media/downtonrealty/MercedesDome1.png">
+  <meta property="og:url" content="https://www.downtonrealty.com/">
+  <meta property="og:type" content="website">
+
+  <!-- Schema.org for Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Downton Realty",
+    "url": "https://www.downtonrealty.com",
+    "logo": "https://u.realgeeks.media/downtonrealty/MercedesDome1.png",
+    "image": "https://u.realgeeks.media/downtonrealty/MercedesDome1.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Atlanta",
+      "addressRegion": "GA",
+      "postalCode": "30303",
+      "addressCountry": "USA"
+    },
+    "description": "Downton Realty helps home buyers and sellers across Greater Georgia with advanced property search tools and expert support.",
+    "telephone": "+1-555-555-5555"
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 <p>&nbsp;</p>
 <style>
-  main,
-  .custom-home-wrapper {
+  main, .custom-home-wrapper {
     margin-top: 0 !important;
     padding-top: 0 !important;
   }
-
   body {
     font-family: "Poppins", sans-serif;
     margin: 0;
@@ -13,7 +52,6 @@
     background: #fff;
     color: #000;
   }
-
   .hero {
     background-image: url("/images/hero.jpg");
     background-size: cover;
@@ -22,7 +60,6 @@
     width: 100%;
     position: relative;
   }
-
   .search-filters {
     background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
@@ -36,14 +73,12 @@
     z-index: 5;
     text-align: center;
   }
-
   .filters-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 15px;
     margin-bottom: 20px;
   }
-
   .filters-grid select {
     width: 100%;
     padding: 12px;
@@ -52,7 +87,6 @@
     border: none;
     border-radius: 6px;
   }
-
   .search-button {
     background-color: #007bff;
     padding: 12px 24px;
@@ -64,42 +98,31 @@
     display: inline-block;
     transition: background-color 0.3s;
   }
-
   .search-button:hover {
     background-color: #0056b3;
   }
-
-  .local-searches,
-  .special-searches {
+  .local-searches, .special-searches {
     text-align: center;
     padding: 60px 20px;
   }
-
   .local-searches {
     background-color: #f1f1f1;
   }
-
   .special-searches {
     background-color: #f9f9f9;
   }
-
-  .local-searches h2,
-  .special-searches h2 {
+  .local-searches h2, .special-searches h2 {
     font-size: 32px;
     margin-bottom: 30px;
   }
-
-  .local-searches-grid,
-  .special-searches-grid {
+  .local-searches-grid, .special-searches-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     max-width: 1400px;
     margin: auto;
   }
-
-  .local-searches-grid a,
-  .special-searches-grid a {
+  .local-searches-grid a, .special-searches-grid a {
     background-size: cover;
     background-position: center;
     height: 150px;
@@ -114,18 +137,15 @@
     border-radius: 8px;
     text-decoration: none;
   }
-
   .special-searches-grid a:hover {
     background-color: #d4d4d4;
   }
-
   .map-search {
     background-color: #007bff;
     color: #fff;
     text-align: center;
     padding: 60px 20px;
   }
-
   .map-search iframe {
     width: 100%;
     height: 600px;
@@ -133,7 +153,6 @@
     border-radius: 10px;
     margin-top: 20px;
   }
-
   .quick-tools {
     display: flex;
     flex-wrap: wrap;
@@ -143,7 +162,6 @@
     background-color: #fff;
     text-align: center;
   }
-
   .quick-tools .tool {
     background: #fff;
     border-radius: 10px;
@@ -152,11 +170,9 @@
     width: 220px;
     transition: transform 0.3s ease;
   }
-
   .quick-tools .tool:hover {
     transform: translateY(-5px);
   }
-
   .quick-tools .tool .icon {
     font-size: 40px;
     background-color: #1d1dff;
@@ -169,109 +185,62 @@
     align-items: center;
     justify-content: center;
   }
-
   .quick-tools h3 {
     margin: 0;
     font-size: 20px;
   }
-
   .quick-tools p {
     font-size: 14px;
     color: #555;
     margin-top: 10px;
-  }
-
-  .tool-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
   }
 </style>
 
 <!-- Hero -->
 <div class="hero">
   <section class="search-filters">
-    <h2>Greater Georgia Is Awesome!</h2>
+    <h1>Greater Georgia Real Estate Search</h1>
     <div class="filters-grid">
-      <select name="county">
-        <option value="">County</option>
-        <option>Dekalb</option>
-        <option>Gwinnett</option>
-        <option>Fulton</option>
-      </select>
-      <select name="city">
-        <option value="">City</option>
-        <option>Atlanta</option>
-        <option>Lithonia</option>
-        <option>Loganville</option>
-      </select>
-      <select name="price">
-        <option value="">Max Price</option>
-        <option>$250,000</option>
-        <option>$500,000</option>
-        <option>$750,000</option>
-        <option>$1,000,000+</option>
-      </select>
-      <select name="beds">
-        <option value="">Beds</option>
-        <option>3+</option>
-        <option>4+</option>
-        <option>5+</option>
-      </select>
-      <select name="baths">
-        <option value="">Baths</option>
-        <option>2+</option>
-        <option>3+</option>
-        <option>4+</option>
-      </select>
-      <select name="type">
-        <option value="">Property Type</option>
-        <option>Home</option>
-        <option>Condo</option>
-        <option>Land</option>
-        <option>Multi-Res</option>
-      </select>
+      <select name="county"><option value="">County</option><option>Dekalb</option><option>Gwinnett</option><option>Fulton</option></select>
+      <select name="city"><option value="">City</option><option>Atlanta</option><option>Lithonia</option><option>Loganville</option></select>
+      <select name="price"><option value="">Max Price</option><option>$250,000</option><option>$500,000</option><option>$750,000</option><option>$1,000,000+</option></select>
+      <select name="beds"><option value="">Beds</option><option>3+</option><option>4+</option><option>5+</option></select>
+      <select name="baths"><option value="">Baths</option><option>2+</option><option>3+</option><option>4+</option></select>
+      <select name="type"><option value="">Property Type</option><option>Home</option><option>Condo</option><option>Land</option><option>Multi-Res</option></select>
     </div>
-    <a class="search-button" href="/search/advanced_search/">Advanced Search</a>
+    <a class="search-button" href="/search/advanced_search/">Start Advanced Search</a>
   </section>
 </div>
 
-<!-- 4 Tiles Section -->
+<!-- Tools -->
 <div class="quick-tools">
   <div class="tool">
-    <div class="icon">
-      <a href="/search/advanced_search/" title="Advanced Search">&#128269;</a>
-    </div>
+    <div class="icon"><a href="/search/advanced_search/" title="Advanced Search">&#128269;</a></div>
     <h3><a href="/search/advanced_search/">Advanced Search</a></h3>
-    <p><a href="/search/advanced_search/">Find your perfect neighborhood</a></p>
+    <p><a href="/search/advanced_search/">Customize your dream home criteria</a></p>
   </div>
   <div class="tool">
-    <div class="icon">
-      <a href="https://www.downtonrealty.com/map_search/results/1/1/#/?region=all&county=all&city=all&type=res&type=con&type=lnd&type=mul&list_price_min=50000&list_price_max=all&area_min=all&beds_min=all&baths_min=all&fireplace=all&per_page=20&page=1" title="Map Search">&#128205;</a>
-    </div>
-    <h3><a href="https://www.downtonrealty.com/map_search/results/1/1/#/?region=all&county=all&city=all&type=res&type=con&type=lnd&type=mul&list_price_min=50000&list_price_max=all&area_min=all&beds_min=all&baths_min=all&fireplace=all&per_page=20&page=1">Map Search</a></h3>
-    <p><a href="https://www.downtonrealty.com/map_search/results/1/1/#/?region=all&county=all&city=all&type=res&type=con&type=lnd&type=mul&list_price_min=50000&list_price_max=all&area_min=all&beds_min=all&baths_min=all&fireplace=all&per_page=20&page=1">Use our interactive map search tool</a></p>
+    <div class="icon"><a href="https://www.downtonrealty.com/map_search/results/1/1/" title="Map Search">&#128205;</a></div>
+    <h3><a href="https://www.downtonrealty.com/map_search/results/1/1/">Map Search</a></h3>
+    <p><a href="https://www.downtonrealty.com/map_search/results/1/1/">Find listings with our interactive map</a></p>
   </div>
   <div class="tool">
-    <div class="icon">
-      <a href="/search/market_report_search/" title="Market Report">&#128203;</a>
-    </div>
+    <div class="icon"><a href="/search/market_report_search/" title="Market Report">&#128203;</a></div>
     <h3><a href="/search/market_report_search/">Market Report</a></h3>
-    <p><a href="/search/market_report_search/">Get an INSTANT market report</a></p>
+    <p><a href="/search/market_report_search/">Track pricing and inventory trends</a></p>
   </div>
   <div class="tool">
-    <div class="icon">
-      <a href="/seller/homeestimate/default" title="Property Valuation">&#127968;</a>
-    </div>
-    <h3><a href="/seller/homeestimate/default">Property Valuation</a></h3>
-    <p><a href="/seller/homeestimate/default">Get an INSTANT property valuation</a></p>
+    <div class="icon"><a href="/seller/homeestimate/default" title="Property Valuation">&#127968;</a></div>
+    <h3><a href="/seller/homeestimate/default">Home Valuation</a></h3>
+    <p><a href="/seller/homeestimate/default">Get a free home value estimate</a></p>
   </div>
 </div>
 
-<!-- Local Searches -->
+<!-- Local & Special Searches -->
 <section class="local-searches">
   <h2>Explore Local Areas</h2>
   <div class="local-searches-grid">
+    <!-- Links preserved exactly as requested -->
     <a style="background-image: url('https://u.realgeeks.media/downtonrealty/MercedesDome1.png');" href="/atlanta/">Atlanta</a>
     <a style="background-image: url('https://u.realgeeks.media/downtonrealty/Carroll_County.png');" href="/carroll/">Carroll</a>
     <a style="background-image: url('https://u.realgeeks.media/downtonrealty/Conyers.png');" href="/conyers/">Conyers</a>
@@ -287,9 +256,8 @@
   </div>
 </section>
 
-<!-- Special Searches -->
 <section class="special-searches">
-  <h2>Special Searches</h2>
+  <h2>Special Property Searches</h2>
   <div class="special-searches-grid">
     <a style="background-image: url('https://u.realgeeks.media/downtonrealty/Home_Equity_Report.png');" href="/search/school-district/">School District Search</a>
     <a style="background-image: url('https://u.realgeeks.media/downtonrealty/NewtonCounty1.png');" href="/search/county/">Search by County</a>
@@ -304,8 +272,13 @@
   </div>
 </section>
 
-<!-- Map -->
+<!-- Map Search Section -->
 <section class="map-search">
-  <h2>Interactive Map Search</h2>
-  <iframe src="/map_search/" loading="lazy"></iframe>
+  <h2>Interactive Map Results</h2>
+  <iframe 
+    src="https://www.downtonrealty.com/map_search/results/1/1/#/?region=all&county=all&city=all&type=res&type=con&type=lnd&type=mul&list_price_min=50000&list_price_max=all&area_min=all&beds_min=all&baths_min=all&fireplace=all&per_page=20&page=1"
+    loading="lazy">
+  </iframe>
 </section>
+</body>
+</html>
