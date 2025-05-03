@@ -1,3 +1,4 @@
+<p>&nbsp;</p>
 <style>
   main,
   .custom-home-wrapper {
@@ -68,18 +69,28 @@
     background-color: #0056b3;
   }
 
-  .local-searches {
-    background-color: #f1f1f1;
+  .local-searches,
+  .special-searches {
     text-align: center;
     padding: 60px 20px;
   }
 
-  .local-searches h2 {
+  .local-searches {
+    background-color: #f1f1f1;
+  }
+
+  .special-searches {
+    background-color: #f9f9f9;
+  }
+
+  .local-searches h2,
+  .special-searches h2 {
     font-size: 32px;
     margin-bottom: 30px;
   }
 
-  .local-searches-grid {
+  .local-searches-grid,
+  .special-searches-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
@@ -87,7 +98,8 @@
     margin: auto;
   }
 
-  .local-searches-grid a {
+  .local-searches-grid a,
+  .special-searches-grid a {
     background-size: cover;
     background-position: center;
     height: 150px;
@@ -102,80 +114,6 @@
     border-radius: 8px;
     text-decoration: none;
   }
-
-  .local-searches-grid a[href="/atlanta/"] {
-    background-image: url("https://u.realgeeks.media/downtonrealty/5df2b1d2-43dc-4759-ad33-d68e7f46d95e.png");
-  }
-  .local-searches-grid a[href="/carroll/"] {
-    background-image: url("https://u.realgeeks.media/downtonrealty/Carroll_County.png");
-  }
-  .local-searches-grid a[href="/conyers/"] {
-    background-image: url("https://u.realgeeks.media/downtonrealty/Conyers.png");
-  }
-  .local-searches-grid a[href="/covington/"] {
-    background-image: url("https://u.realgeeks.media/downtonrealty/Covington2.png");
-  }
-  .local-searches-grid a[href="/dekalb/"] {
-    background-image: url("https://u.realgeeks.media/downtonrealty/DeKalb.png");
-  }
-  .local-searches-grid a[href="/gwinnett/"] {
-    background-image: url("https://u.realgeeks.media/downtonrealty/Gwinnett3.png");
-  }
-  .local-searches-grid a[href="/haralson/"] {
-    background-image: url("https://u.realgeeks.media/downtonrealty/Haralson_County.png");
-  }
-  .local-searches-grid a[href="/lithonia/"] {
-    background-image: url("https://u.realgeeks.media/downtonrealty/Lithonia.png");
-  }
-  .local-searches-grid a[href="/loganville/"] {
-    background-image: url("https://u.realgeeks.media/downtonrealty/LoganvilleTower.png");
-  }
-  .local-searches-grid a[href="/newton/"] {
-    background-image: url("https://u.realgeeks.media/downtonrealty/NewtonCounty1.png");
-  }
-  .local-searches-grid a[href="/rockdale/"] {
-    background-image: url("https://u.realgeeks.media/downtonrealty/real_geeks_images/BrownLivingRoomGoldAccents.jpg");
-  }
-  .local-searches-grid a[href="/walton/"] {
-    background-image: url("https://u.realgeeks.media/downtonrealty/real_geeks_images/WhiteLivingRoomGreenSofa.jpg");
-  }
-
-  .special-searches {
-    background-color: #f9f9f9;
-    text-align: center;
-    padding: 60px 20px;
-  }
-
-  .special-searches h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-  }
-
-  .special-searches-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* exactly 5 across */
-  gap: 20px;
-  max-width: 1400px;
-  margin: auto;
-}
-
-.special-searches-grid a {
-  background-size: cover;
-  background-position: center;
-  height: 150px; /* match local-searches height */
-  color: #fff;
-  text-shadow: 1px 1px 4px #000;
-  font-weight: bold;
-  font-size: 18px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 15px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
 
   .special-searches-grid a:hover {
     background-color: #d4d4d4;
@@ -196,7 +134,6 @@
     margin-top: 20px;
   }
 
-  /* Tiles Section */
   .quick-tools {
     display: flex;
     flex-wrap: wrap;
@@ -243,8 +180,15 @@
     color: #555;
     margin-top: 10px;
   }
+
+  .tool-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
 </style>
-<!-- Hero Section -->
+
+<!-- Hero -->
 <div class="hero">
   <section class="search-filters">
     <h2>Greater Georgia Is Awesome!</h2>
@@ -253,29 +197,34 @@
         <option value="">County</option>
         <option>Dekalb</option>
         <option>Gwinnett</option>
-        <option>Fulton</option></select
-      ><select name="city">
+        <option>Fulton</option>
+      </select>
+      <select name="city">
         <option value="">City</option>
         <option>Atlanta</option>
         <option>Lithonia</option>
-        <option>Loganville</option></select
-      ><select name="price">
+        <option>Loganville</option>
+      </select>
+      <select name="price">
         <option value="">Max Price</option>
         <option>$250,000</option>
         <option>$500,000</option>
         <option>$750,000</option>
-        <option>$1,000,000+</option></select
-      ><select name="beds">
+        <option>$1,000,000+</option>
+      </select>
+      <select name="beds">
         <option value="">Beds</option>
         <option>3+</option>
         <option>4+</option>
-        <option>5+</option></select
-      ><select name="baths">
+        <option>5+</option>
+      </select>
+      <select name="baths">
         <option value="">Baths</option>
         <option>2+</option>
         <option>3+</option>
-        <option>4+</option></select
-      ><select name="type">
+        <option>4+</option>
+      </select>
+      <select name="type">
         <option value="">Property Type</option>
         <option>Home</option>
         <option>Condo</option>
@@ -286,130 +235,76 @@
     <a class="search-button" href="/search/advanced_search/">Advanced Search</a>
   </section>
 </div>
+
 <!-- 4 Tiles Section -->
 <div class="quick-tools">
   <div class="tool">
-    <div class="icon">&#128269;</div>
-    <h3>Advanced Search</h3>
-    <p>Find your perfect neighborhood</p>
+    <div class="icon">
+      <a href="/search/advanced_search/" title="Advanced Search">&#128269;</a>
+    </div>
+    <h3><a href="/search/advanced_search/">Advanced Search</a></h3>
+    <p><a href="/search/advanced_search/">Find your perfect neighborhood</a></p>
   </div>
   <div class="tool">
-    <div class="icon">&#128205;</div>
-    <h3>Map Search</h3>
-    <p>Use our interactive map search tool</p>
+    <div class="icon">
+      <a href="https://www.downtonrealty.com/map_search/results/1/1/#/?region=all&county=all&city=all&type=res&type=con&type=lnd&type=mul&list_price_min=50000&list_price_max=all&area_min=all&beds_min=all&baths_min=all&fireplace=all&per_page=20&page=1" title="Map Search">&#128205;</a>
+    </div>
+    <h3><a href="https://www.downtonrealty.com/map_search/results/1/1/#/?region=all&county=all&city=all&type=res&type=con&type=lnd&type=mul&list_price_min=50000&list_price_max=all&area_min=all&beds_min=all&baths_min=all&fireplace=all&per_page=20&page=1">Map Search</a></h3>
+    <p><a href="https://www.downtonrealty.com/map_search/results/1/1/#/?region=all&county=all&city=all&type=res&type=con&type=lnd&type=mul&list_price_min=50000&list_price_max=all&area_min=all&beds_min=all&baths_min=all&fireplace=all&per_page=20&page=1">Use our interactive map search tool</a></p>
   </div>
   <div class="tool">
-    <div class="icon">&#128203;</div>
-    <h3>Market Report</h3>
-    <p>Get an INSTANT market report</p>
+    <div class="icon">
+      <a href="/search/market_report_search/" title="Market Report">&#128203;</a>
+    </div>
+    <h3><a href="/search/market_report_search/">Market Report</a></h3>
+    <p><a href="/search/market_report_search/">Get an INSTANT market report</a></p>
   </div>
   <div class="tool">
-    <div class="icon">&#127968;</div>
-    <h3>Property Valuation</h3>
-    <p>Get an INSTANT property valuation</p>
+    <div class="icon">
+      <a href="/seller/homeestimate/default" title="Property Valuation">&#127968;</a>
+    </div>
+    <h3><a href="/seller/homeestimate/default">Property Valuation</a></h3>
+    <p><a href="/seller/homeestimate/default">Get an INSTANT property valuation</a></p>
   </div>
 </div>
-<!-- Local Searches -->
+
 <!-- Local Searches -->
 <section class="local-searches">
   <h2>Explore Local Areas</h2>
   <div class="local-searches-grid">
-    <a
-      href="/atlanta/"
-      style="
-        background-image: url('https://u.realgeeks.media/downtonrealty/5df2b1d2-43dc-4759-ad33-d68e7f46d95e.png');
-      "
-      >Atlanta
-    <a
-      href="/carroll/"
-      style="
-        background-image: url('https://u.realgeeks.media/downtonrealty/Carroll_County.png');
-      "
-      >Carroll
-    <a
-      href="/conyers/"
-      style="
-        background-image: url('https://u.realgeeks.media/downtonrealty/Conyers.png');
-      "
-      >Conyers
-    <a
-      href="/covington/"
-      style="
-        background-image: url('https://u.realgeeks.media/downtonrealty/Covington2.png');
-      "
-      >Covington
-    <a
-      href="/dekalb/"
-      style="
-        background-image: url('https://u.realgeeks.media/downtonrealty/DeKalb.png');
-      "
-      >Dekalb
-    <a
-      href="/gwinnett/"
-      style="
-        background-image: url('https://u.realgeeks.media/downtonrealty/Gwinnett3.png');
-      "
-      >Gwinnett
-    <a
-      href="/haralson/"
-      style="
-        background-image: url('https://u.realgeeks.media/downtonrealty/Haralson_County.png');
-      "
-      >Haralson
-    <a
-      href="/lithonia/"
-      style="
-        background-image: url('https://u.realgeeks.media/downtonrealty/Lithonia.png');
-      "
-      >Lithonia
-    <a
-      href="/loganville/"
-      style="
-        background-image: url('https://u.realgeeks.media/downtonrealty/LoganvilleTower.png');
-      "
-      >Loganville
-    <a
-      href="/newton/"
-      style="
-        background-image: url('https://u.realgeeks.media/downtonrealty/NewtonCounty1.png');
-      "
-      >Newton
-    <a
-      href="/rockdale/"
-      style="
-        background-image: url('https://u.realgeeks.media/downtonrealty/real_geeks_images/BrownLivingRoomGoldAccents.jpg');
-      "
-      >Rockdale
-    <a
-      href="/walton/"
-      style="
-        background-image: url('https://u.realgeeks.media/downtonrealty/real_geeks_images/WhiteLivingRoomGreenSofa.jpg');
-      "
-      >Walton
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/MercedesDome1.png');" href="/atlanta/">Atlanta</a>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/Carroll_County.png');" href="/carroll/">Carroll</a>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/Conyers.png');" href="/conyers/">Conyers</a>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/Covington2.png');" href="/covington/">Covington</a>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/DeKalb.png');" href="/dekalb/">Dekalb</a>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/Gwinnett3.png');" href="/gwinnett/">Gwinnett</a>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/Haralson_County.png');" href="/haralson/">Haralson</a>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/Lithonia.png');" href="/lithonia/">Lithonia</a>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/LoganvilleTower.png');" href="/loganville/">Loganville</a>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/NewtonCounty1.png');" href="/newton/">Newton</a>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/real_geeks_images/BrownLivingRoomGoldAccents.jpg');" href="/rockdale/">Rockdale</a>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/real_geeks_images/WhiteLivingRoomGreenSofa.jpg');" href="/walton/">Walton</a>
   </div>
 </section>
 
 <!-- Special Searches -->
 <section class="special-searches">
-  <h2>
-    ---------------------------------- Special Searches
-    ----------------------------------
-  </h2>
+  <h2>Special Searches</h2>
   <div class="special-searches-grid">
-    <a href="/search/school-district/" style="background-image: url('https://u.realgeeks.media/downtonrealty/Home_Equity_Report.png');">School District Search</a>
-    <a href="/search/county/" style="background-image: url('https://u.realgeeks.media/downtonrealty/NewtonCounty1.png');">Search by County</a>
-    <a href="/search/1-story-homes/" style="background-image: url('https://u.realgeeks.media/downtonrealty/RanchHome3.png');">1 Story Homes</a>
-    <a href="/search/no-hoa/" style="background-image: url('https://u.realgeeks.media/downtonrealty/NoHOA2.png');">No HOA Homes</a>
-    <a href="/search/new-construction/" style="background-image: url('https://u.realgeeks.media/downtonrealty/NewConstruction5.png');">New Construction</a>
-    <a href="/search/5-bedroom/" style="background-image: url('https://u.realgeeks.media/downtonrealty/5_bedroom.png');">5 Bedroom Homes</a>
-    <a href="/search/4-bedroom/" style="background-image: url('https://u.realgeeks.media/downtonrealty/BedroomGenius.png');">4 Bedroom Homes</a>
-    <a href="/search/3-bedroom/" style="background-image: url('https://u.realgeeks.media/downtonrealty/bedroomdancer.png');">3 Bedroom Homes</a>
-    <a href="/search/3-car-garage/" style="background-image: url('https://u.realgeeks.media/downtonrealty/Investors2.png');">3 Car Garage</a>
-    <a href="/search/pool-homes/" style="background-image: url('https://u.realgeeks.media/downtonrealty/Basement5Stars.png');">Pool Homes</a>
-  </div>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/Home_Equity_Report.png');" href="/search/school-district/">School District Search</a>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/NewtonCounty1.png');" href="/search/county/">Search by County</a>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/RanchHome3.png');" href="/search/1-story-homes/">1 Story Homes</a>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/NoHOA2.png');" href="/search/no-hoa/">No HOA Homes</a>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/NewConstruction5.png');" href="/search/new-construction/">New Construction</a>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/5_bedroom.png');" href="/search/5-bedroom/">5 Bedroom Homes</a>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/BedroomGenius.png');" href="/search/4-bedroom/">4 Bedroom Homes</a>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/bedroomdancer.png');" href="/search/3-bedroom/">3 Bedroom Homes</a>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/Investors2.png');" href="/search/3-car-garage/">3 Car Garage</a>
+    <a style="background-image: url('https://u.realgeeks.media/downtonrealty/Basement5Stars.png');" href="/search/pool-homes/">Pool Homes</a>
   </div>
 </section>
-<!-- Map Search -->
+
+<!-- Map -->
 <section class="map-search">
   <h2>Interactive Map Search</h2>
   <iframe src="/map_search/" loading="lazy"></iframe>
